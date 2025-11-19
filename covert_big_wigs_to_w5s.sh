@@ -15,6 +15,7 @@ gtex_targets_file="${5}"
 source ~/.bashrc
 conda activate borzoi
 
+if false; then
 tail -n +2 $gtex_bigwig_summary_file | while read -r col1 sample_id bw_file rest; do
 
 	echo $sample_id"  "${bw_file}
@@ -24,8 +25,7 @@ tail -n +2 $gtex_bigwig_summary_file | while read -r col1 sample_id bw_file rest
 
 
   	python $borzoi_code_dir"src/scripts/w5_qc.py" -b "$BORZOI_HG38/blacklist/blacklist_hg38_all.bed" -o ${w5_qc_dir}${sample_id} $w5_file
-
 done
-
+fi
 
 python create_targets_file.py $gtex_bigwig_summary_file $w5_dir $gtex_targets_file
