@@ -32,6 +32,6 @@ fi
 
 gtex_targets_file=${w5_dir}"gtex_targets.txt"
 if false; then
-sh covert_big_wigs_to_w5s.sh $gtex_bigwig_summary_file $w5_dir $borzoi_code_dir $w5_qc_dir $gtex_targets_file
+sbatch covert_big_wigs_to_w5s.sh $gtex_bigwig_summary_file $w5_dir $borzoi_code_dir $w5_qc_dir $gtex_targets_file
 fi
 
